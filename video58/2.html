@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>l'élement canvas</title>
+        <meta charset="utf-8"> 
+        <style>
+            body{
+                margin: 0px;
+                padding: 0px;
+            }
+            
+            #canvas1{
+                border: 2px solid orange;
+            }
+        </style> 
+    </head>
+    <body>
+        
+        <canvas id="canvas1" width="400" height="200"></canvas>
+
+        <script>
+            var canvas = document.getElementById('canvas1');
+            var contexte = canvas.getContext('2d');
+
+            var radial = contexte.createRadialGradient(200, 100, 20, 200, 100, 75);
+
+            radial.addColorStop(0, '#4CB');
+            radial.addColorStop(0.25, '#48C');
+            radial.addColorStop(1, '#A4A');
+
+            contexte.beginPath();
+            contexte.fillStyle = radial;
+            contexte.arc(200, 100, 75, 0, 2*Math.PI);
+            contexte.fill();
+        </script>
+    </body>
+</html> 

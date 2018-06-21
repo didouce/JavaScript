@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Browser object Model</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <p>Engagez vous qu'ils disaient, rengagez vous qu'ils disaient</p>
+        <p id="reg"></p>
+        <script>
+            var expr = document.querySelector('p');
+
+            var r1 = /vous/;
+            var r2 = /vous/g;
+
+            var res1 = expr.textContent.replace(r1, 'moi');
+            var res2 = expr.textContent.replace(r2, 'moi');
+
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML = 'Resultat 1: ' + res1 +             
+            '<br>Resultat 2: ' + res2;
+
+        </script>
+    </body>
+</html> 

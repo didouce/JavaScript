@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Browser object Model</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <h1 id="gros_titre">Le BOM</h1>
+        <p></p>
+        
+        <script>
+            var para = document.querySelector('p');
+            var loc = navigator.geolocation;
+
+            (function(){
+                if (loc){
+                    loc.getCurrentPosition(coordonnees);
+                }
+                else{
+                    para.innerHTML = 'Localisation non disponible';
+                }
+            })();
+
+            function coordonnees(x){
+                para.innerHTML = 
+                'Latitude : ' + x.coords.latitude +
+                '<br>Logitude : ' + x.coords.longitude;
+            }
+        </script>
+    </body>
+</html> 

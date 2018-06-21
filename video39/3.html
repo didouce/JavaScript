@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le DOM HTML</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <h1 id="gros_titre">Les évènements</h1>
+        <p>Cliquez moi !</p>
+        <p>Un deuxieme<strong> paragraphe</strong></p>
+        
+
+        <script>
+            var p1 = document.querySelector('p');
+
+            p1.addEventListener('mouseover',Fonction1);
+            p1.addEventListener('mousedown',Fonction2);
+
+            function Fonction1(){
+                this.innerHTML = 'Cliquez moi maintenant';
+                this.style.backgroundColor = 'orange';
+            }
+
+            function Fonction2(){
+                this.innerHTML = 'Bravo';
+                this.style.color = '#26C';
+                this.style.fontWeight = 'bold';
+                this.style.fontSize = '24px';
+            }
+        </script>
+        
+    </body>
+</html>  

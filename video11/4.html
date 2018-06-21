@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Les conditions en JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Les conditions en JavaSript</h1>
+
+        <script>
+            var heure = "neuf";
+
+            if(typeof(heure) =="number" ==true){
+                if(heure <= 18 == true){
+                    alert("C'est l'après midi");
+                }
+                else if(heure ==12 ==true){
+                    alert("Il est midi");
+                }
+                else if(heure <12 ==true){
+                    alert("C'est la matin");
+                }
+                else{
+                    alert("C'est le soir");
+                }
+            }
+            else{
+                alert("Mauvais type de valeur")
+            }
+
+        </script>
+
+    </body>
+
+</html>

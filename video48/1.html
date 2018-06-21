@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Browser object Model</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <p>Engagez vous qu'ils disaient, rengagez vous qu'ils disaient</p>
+        <p id="reg"></p>
+        <script>
+            var expr = document.querySelector('p');
+
+            var r1 = /engagez/i;
+            var r2 = /engagez/ig;
+
+            var res1 = expr.textContent.match(r1);
+            var res2 = expr.textContent.match(r2);
+
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML = 'Resultat de match() sur regex: ' + res1 +             
+            '<br>Resultat match() sur regex 2 : ' + res2;
+
+        </script>
+    </body>
+</html> 

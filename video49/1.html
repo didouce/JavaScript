@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Browser object Model</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+       <p>1, 10, 100</p>
+       <p id="reg"></p>
+        <script>
+           var rec = document.querySelector('p').textContent;
+
+           var r1 = /10+/g;
+
+           var res1 = rec.match(r1);
+
+           var resultat = document.getElementById('reg');
+           resultat.innerHTML = 'Resultat : ' + res1;
+        </script>
+    </body>
+</html> 

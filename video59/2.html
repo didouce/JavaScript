@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>l'élement canvas</title>
+        <meta charset="utf-8"> 
+        <style>
+            body{
+                margin: 0px;
+                padding: 0px;
+            }
+            
+            #canvas1{
+                border: 2px solid orange;
+            }
+            #image{display: none;}
+        </style> 
+    </head>
+    <body>
+        <img id="image" src="une_citation.png" alt="Gladiator">
+        <canvas id="canvas1" width="600" height="400"></canvas>
+
+        <script>
+            var canvas = document.getElementById('canvas1');
+            var contexte = canvas.getContext('2d');
+            var image = document.getElementById('image')
+
+            image.addEventListener('load', affiche);
+            function affiche(){
+                contexte.drawImage(image, 25, 25, 500, 350);
+            }
+
+          
+
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les expressions regulieres</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+       <p>On apprend à utiliser les regex en JavaScript en 2018</p>
+       <p id="reg"></p>
+        <script>
+            var rec = document.querySelector('p').textContent;
+            var r1 = /[C-X]/g;
+            var res1 = rec.match(r1);
+
+            var r2 = /[^aeiou]/g;
+            var res2 = rec.match(r2);
+
+            var r3 = /[0-9]/g;
+            var res3 = rec.match(r3);
+
+            var r4 = /^[A-Z]/;
+            var res4 = r4.test(rec);
+
+            var r5 = /[0-9]{4}/;
+            var res5 = rec.match(r5);
+  
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML = 
+            'Majuscule entre C et X : ' + res1 +
+            '<br>Tour sauf voyelle minuscules : ' + res2 +
+            '<br>Tout sauf les chiffres : ' + res3 + 
+            '<br>Majuscules en début de chaine : ' + res4 + 
+            '<br>Succession de 4 chiffres : ' + res5;
+        </script>
+    </body>
+</html> 

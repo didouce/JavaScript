@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les expressions regulieres</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+       <p>On apprend à utiliser les [regex] en JavaScript en 2018 -?</p>
+       <p id="reg"></p>
+        <script>
+            var rec = document.querySelector('p').textContent;
+
+            var r1 = /./g;
+            var res1 = rec.match(r1);
+
+            var r2 = /\d/g;
+            var res2 = rec.match(r2);
+
+            var r3 = /\D/g;
+            var res3 = rec.match(r3);
+
+            var r4 = /\br/;
+            var res4 = r4.test(rec);
+
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML = 
+            'Tout sauf une nouvelle ligne : ' + res1 + 
+            '<br>Tous les chiffres : ' + res2 +
+            '<br>Tout sauf [0-9] : ' + res3 +
+            '<br> r en début ou fin de mot ? ' + res4;
+         
+        </script>
+    </body>
+</html> 

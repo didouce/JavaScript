@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Browser object Model</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+       <p>On apprend à utiliser les regex en JavaScript</p>
+       <p id="reg"></p>
+        <script>
+           var rec = document.querySelector('p').textContent;
+
+           var r1 = /x+/;
+           var res1 = r1.test(rec);
+
+           var r2 = /e(nd)?/g;
+           var res2 = rec.match(r2);
+
+           var r3 = /e$/i;
+           var res3 = r3.test(r3);
+
+           var r4 = /p{2}/;
+           var res4 = r4.test(rec);
+
+           var r5 = /Java(?=Script)/;
+           var res5 = r5.test(rec);
+
+           var resultat = document.getElementById('reg');
+           resultat.innerHTML = 
+           'Présence d\'un "x" : ' + res1 +
+           '<br>Occurence de "e" ou "end" :' + res2 + 
+           '<br>Chaine finit par un "e" ? :  ' + res3 +
+           '<br>Contient deux "p" à la suite ? : ' + res4 + 
+           '<br>Présence de "Java" suvie de "Script" ? : ' + res5
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>l'élement canvas</title>
+        <meta charset="utf-8"> 
+        <style>
+            body{
+                margin: 0px;
+                padding: 0px;
+            }
+            
+            #canvas1{
+                border: 2px solid orange;
+            }
+        </style> 
+    </head>
+    <body>
+        <canvas id="canvas1" width="600" height="400"></canvas>
+
+        <script>
+            var canvas = document.getElementById('canvas1');
+            var contexte = canvas.getContext('2d');
+
+            contexte.fillStyle = '#48A';
+            contexte.fillRect(10, 10, 75, 75);
+
+            contexte.translate(75, 75);
+
+            contexte.fillStyle = 'RGBa(64, 192, 128)';
+            contexte.fillRect(10, 10, 75, 75);
+        </script>
+    </body>
+</html> 

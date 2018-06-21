@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JS</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Les objets en JS</h1>
+        
+        <script>
+            var texte = "J'apprends le JAVASCRIPT";
+
+            var premiere = texte.indexOf('p');
+            var derniere = texte.lastIndexOf('p');
+            var sequence = texte.indexOf('le');
+            var position = texte.indexOf('J',1);
+
+            alert('Le premier p :' + premiere +
+                  '\nLe dernier p : ' + derniere +
+                   '\nPremier "le" trouvé en position : ' + sequence + 
+                    '\nUn "J" trouvé en position : ' + position);
+        </script>
+    </body>
+</htm>

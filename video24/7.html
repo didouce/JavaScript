@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JS</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <h1>Les objets en JS</h1>
+        <script>
+            //methode sort pour classer les elements dans un ordre alphabétique
+            var prenoms = ['Pierre', 'pierre', 'Julia', 'julia'], p='';
+
+            prenoms.sort();
+
+            for(var i=0; i<prenoms.length; i++){
+                p+= 'Prenom : ' + (i+1) + ' : ' + prenoms[i] + '\n';
+            }
+
+            alert('Nouveau tableau : \n\n' +p );
+        
+        </script>
+    </body>
+</html>

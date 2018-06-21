@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les évènements</title>
+        <meta charset="utf-8">  
+        <style>
+            div{
+                border: 1px solid orange;
+                background-color: #29B;
+                padding: 20px;
+                margin: 10px;
+            }
+        </style>      
+    </head>
+    <body>
+        <h1 id="gros_titre">Les évènements</h1>
+        <div>
+            <p id="p1">Qui est le déclencheur? Le porteur d'évenement</p>
+        </div>
+
+        <script>
+           var div1 = document.getElementById('div1');
+           var p1 = document.getElementById('p1');
+           
+           div1.addEventListener('click', TexteD, true);
+           p1.addEventListener('click', TexteP, true);
+
+           function TexteD(e){
+               alert('Stop à la propagation');
+               e.stopPropagation();
+           }
+
+           function TexteP(){
+               alert('Ceci ne s\'affichera pas');
+           }
+
+        
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Les objets en JavaScript</title>
+        <meta charset="utf_8">
+    </head>
+
+    <body>
+        <h1>Les objets en JavaSript</h1>
+
+        <script>
+            var d = new Date();
+
+            var dy = d.getFullYear();
+            var dmo = d.getMonth();
+            var dday = d.getDay();
+            var ddate = d.getDate();
+            var dh = d.getHours();
+            var dmi = d.getMinutes();
+            var ds = d.getSeconds();
+
+            var mois = ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre'];
+            var jour = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+
+            alert('Le' +' ' + jour[dday] + ' ' + ddate + ' ' + mois[dmo] + ' ' + dy + 
+                    '\nIl est : '+  dh + 'h' + dmi + 'mn et' + ds + 's.');
+        </script>
+
+    </body>
+
+</html>

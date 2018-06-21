@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JavaScript</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <h1>Les objets en JavaScript</h1>
+        <script>
+            //parcourir les valeurs d'un tableau en utilsant la boucle for
+            //on ajoute une variable p vide au debut
+            //on déclare un premiere indice 0
+            //on incrémente de 1 
+            var prenoms = ['Pierre', 'Victor', 'Julia', 'Claire'],p='';
+            for(i=0; i<prenoms.length; i++){
+                p+= 'Prenom n° ' + (i+1) + ' : ' + prenoms[i] + '\n';
+            }
+            alert(p);
+        </script>
+    </body>
+</html>

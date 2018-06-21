@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les événeents</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <h1 id="gros_titre">Les événements</h1>
+        <div id="div">
+            <p>Un premier paragraphe</p>
+            <p>Un deuxième paragraphe</p>
+        </div>
+        
+        <script>
+            var div = document.getElementById('div');
+            var p1 = document.querySelector('p');
+
+            div.addEventListener('click',MessageDiv);
+            div.addEventListener('click',MessageP);
+
+            function MessageDiv(){
+                alert('Evenement du div');
+            }
+            
+            function MessageP(){
+                alert('Evenement du paragraphe');
+            }
+        </script>
+        
+    </body>
+</html>  

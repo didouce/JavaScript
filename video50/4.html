@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les expressions regulieres</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+       <p>On apprend à utiliser les [regex] en JavaScript en 2018</p>
+       <p id="reg"></p>
+        <script>
+            var rec = document.querySelector('p').textContent;
+
+            var r1 = /\[regex\]/g;
+            var res1 = rec.match(r1);
+
+            var r2 = /[e\[\]]/g;
+            var res2 = rec.match(r2);
+
+            var r3 = /[0-9-]/g;
+            var res3 = rec.match(r3);
+
+            var r4 = /\?$/;
+            var res4 = rec.match(r4);
+
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML = 
+            'Recherche "[regex]" : ' + res1 + 
+            '<br>Recherche "e", "[", "]" : ' + res2 + 
+            '<br>Recherche 0-9 et "-" : ' + res3 + 
+            '<br>Recherche "?" en fin de chaine : ' + res4;
+        </script>
+    </body>
+</html> 

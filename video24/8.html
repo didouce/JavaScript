@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JS</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <h1>Les objets en JS</h1>
+        <script>
+            //methode reverse pour nous donner les elements dans un ordre inversé
+            var prenoms = ['Pierre', 'pierre', 'Julia', 'julia'], p='';
+
+            prenoms.sort();
+            prenoms.reverse();
+
+            for(var i=0; i<prenoms.length; i++){
+                p+= 'Prenom : ' + (i+1) + ' : ' + prenoms[i] + '\n';
+            }
+
+            alert('Nouveau tableau : \n\n' +p );
+        
+        </script>
+    </body>
+</html>

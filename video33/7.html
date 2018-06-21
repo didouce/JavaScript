@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le DOM HTML</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 id="gros_titre">Découverte du DOM HTML</h1>
+        <p class="para">Du texte et <a href="http://www.google.fr">un lien</a></p>
+        <p class="para">Un deuxieme paragraphe</p>
+
+        <script>
+            var  titre_page = document.title;
+            var page = document.body;
+            var lien = document.links;
+
+            alert('Contenu de titre_page : ' + titre_page +
+                    '\nContenu de page : ' + page + 
+                        '\nContenu de lien : ' + lien[0]);s 
+        </script>
+    </body>
+</html>

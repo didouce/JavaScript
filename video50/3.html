@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les expressions regulieres</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+       <p>On apprend à utiliser les [regex] en JavaScript en 2018</p>
+       <p id="reg"></p>
+        <script>
+            var rec = document.querySelector('p').textContent;
+
+            var r1 = /[a-àéè]/g;
+            var res1 = rec.match(r1);
+
+            var r2 = /[a-zA-Z0-9]/g;
+            var res2 = rec.match(r2);
+
+            var r3 = /[^a-zA-Z]/g;
+            var res3 = rec.match(r3);
+  
+            var resultat = document.getElementById('reg');
+            resultat.innerHTML = 
+            'Lettre miniscule plus à, é et è : ' + res1 +
+            '<br>Lettre miniscule, majuscule et chiffre : ' + res2 + 
+            '<br>Tout sauf a-z et A-Z : ' + res3;
+        </script>
+    </body>
+</html> 

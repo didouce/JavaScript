@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>l'élement canvas</title>
+        <meta charset="utf-8"> 
+        <style>
+            body{
+                margin: 0px;
+                padding: 0px;
+            }
+            
+            #canvas1{
+                border: 2px solid orange;
+            }
+        </style> 
+    </head>
+    <body>
+        
+        <canvas id="canvas1" width="400" height="200"></canvas>
+
+        <script>
+            var canvas = document.getElementById('canvas1');
+            var contexte = canvas.getContext('2d');
+
+            contexte.strokeStyle = '#48C';
+
+            contexte.moveTo(20, 20);
+            contexte.lineTo(300, 150);
+
+            contexte.stroke();
+
+         
+
+        </script>
+    </body>
+</html> 

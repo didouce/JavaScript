@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Notions avancées</title>
+        <meta charset="utf-8"> 
+ 
+    </head>
+    <body>
+        <p id="varX"></p>
+        <p id="varY"></p>
+        <script>
+            'use strict';
+            var afficheX = document.getElementById('varX');
+            var afficheY = document.getElementById('varY');
+            
+            var x = 5;
+            afficheX.innerHTML = x;
+            //faute de déclarer var tout ce qu'il y a apres ne s'affichera pas
+            y = 10;
+
+            afficheY.innerHTML = y;
+        </script>
+    </body>
+</html> 

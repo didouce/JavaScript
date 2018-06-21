@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript et formulaires</title>
+        <meta charset="utf-8"> 
+        <style>
+            label{
+                display: inline-block;
+                min-width: 200px;
+            }
+        </style>       
+    </head>
+    <body>
+       <h1>Les formulaires en HTML</h1>
+       
+       <form method="post" action="traitement.php">
+           <label for="prenom">Entrez votre prenom :</label>
+           <input type="text" name="prenom" id="prenom"><br>
+
+           <label for="mail">Entrez votre email :</label>
+           <input type="email" name="mail" id="mail"><br>
+
+           <label for="tel">Numéro de téléphone :</label>
+           <input type="tel" name="tel" id="tel"><br>
+
+           <input type="submit" value="valider" >
+       </form>
+        
+    </body>
+</html> 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JS</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <h1>Les objets en JS</h1>
+        <script>
+            //methode shift pour supprimer des elements au debut
+            var prenoms = ['Pierre', 'Victor', 'Julia', 'Claire'], p='';
+
+            var suppr = prenoms.shift();
+
+            for(var i=0; i<prenoms.length; i++){
+                p+='Prenom n° ' + (i+1) + ' : ' + prenoms[i] + '\n';
+            }
+            alert('Nouveau tableau : \n ' + p + '\n\nPrénom supprimé :' + suppr);
+
+        </script>
+    </body>
+</html>

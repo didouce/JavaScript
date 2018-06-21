@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les introdutions aux objets</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <h1>Les introdutions aux objets</h1>
+        <script>
+            var primitive = "Je suis une valeur primitive"
+
+            var moi = {
+                prenom : "Lynda",
+                nom : "Bayoud",
+                age : 25,
+
+                identite : function(){
+                    return 'Prénom : ' + this.prenom +
+                           '\nNom : ' + this.nom +
+                           '\nAge : ' + this.age;
+                }
+            }
+            alert(moi.identite());
+        </script>
+    </body>
+</html> 

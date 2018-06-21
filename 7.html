@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les variables en JavaScript</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <h1>Les variables en JavaScript</h1>
+        <script>
+
+            //nombres
+            var x = 25;
+            var xprime = "25";
+            var y = -75;
+            var z = 3.14;
+
+            //chaine de caractere
+            var prenom = "Pierre";
+            var nom = 'Giraud';
+            var sexe = "Je suis un homme";
+
+            //texte contenant une apostrophe 
+            var dpt = "Je vis dans le \"83\"";
+            var dpt2 = 'Je vis dans le "83"';
+            var ville = 'j\'habite à Toulon';
+            var ville2 = "j'habite à Toulon";
+            
+            //booléens
+            var a = true, b = false;
+            var c = "true";
+
+            //valeurs speciales 
+            var n = null;
+            var u = undefined;
+            var nn= NaN;
+
+            //cette valeur ecrase la premiere 
+            x = "quatre";
+
+            //la fonction alert pour afficher la boite de dialoge
+            //la fonction typeof pour afficher le type de la variable
+            alert("Variable x : " + typeof(x) +
+            "\nVariable y : " + typeof(y) +
+            "\nVariable a : " + typeof(a) +
+            "\nVariable n : " + typeof(n) +
+            "\nVariable u : " + typeof(u) +
+            "\nVariable nn : " + typeof(nn));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le DOM HTML</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 id="gros_titre">Découverte du DOM HTML</h1>
+        <p class="para">Du texte et <a href="http://www.google.fr">un lien</a></p>
+        <p class="para">Un deuxieme paragraphe</p>
+
+        <script>
+            //innerhtml pour ajouter du contenu et des balises 
+            document.getElementById('gros_titre').innerHTML += '<mark>et de la modification JS</mark>';
+            
+        </script>
+    </body>
+</html>

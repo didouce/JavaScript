@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Notions avancées</title>
+        <meta charset="utf-8"> 
+ 
+    </head>
+    <body>
+       <p id="cook"></p>
+        <script>
+            function creerCookie(nom, valeur, jour){
+                //si les jours ont bien été définis
+                if (jour){
+                    //on crée un objet date stockant la date actuelle
+                    var date = new Date();
+                    //on définit la date d'expérience du cookie
+                    date.setTime(date.getTime()+(jour*24*60*60*1000));
+                    //on met la date au bon format pour un cookie 
+                    var exp = '; expires ='+date.toGMTString();
+                }
+                //si les jours n'ont pas été définis, pas besoin de calcul
+                else{
+                    var exp = '';
+                }
+                document.cookie = nom+ '='+valeur+exp+'; path=/';
+            }
+
+            function lireCookie(nom){
+                //on récupére le nom du cookie et le signe '='
+                var nomEtEgal = nom + '=';
+                //reccupére tous les cookies dans le tableau
+                var cTableau = document.cookie.split(';');
+                //parcourir le tableau crée
+                for (var i=0; i<cTableau.length; i++){
+                    //on recupére tous les noms et valeurs des cookies
+                    var c = cTableau[i];
+                    //on supprime les espaces potentiels dans c jusqu'à tomber sur le cookie
+                    while(c.charAt(0)==' '){
+                        c = c.substring(1, c.length)
+                    }
+                    if (c.indexOf(nomEtEgal)==0) {
+                        return c.substring(nomEtEgal.length, c.length);
+                    }
+                    //si nom du cookie non trouvé , il n'existe pas
+                    return null
+                }
+            }
+
+            function supprimerCookie(nom){
+                //on donne le nom du cookie à supprimer, puis on utilise creercookies()pour date
+                creerCookie(nom,'',-1);
+            }
+
+            //on cree deux cookies
+            creerCookie('cookie1', 'je suis le premier cookie', 7);
+            creerCookie('cookie2', 'je suis un autre cookie', 7);
+
+            var affiche = document.getElementById('cook');
+            affiche.innerHTML='Valeur : ' + lireCookie('cookie1');
+        </script>
+    </body>
+</html> 

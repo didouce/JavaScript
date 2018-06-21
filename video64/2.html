@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Notions avancées</title>
+        <meta charset="utf-8"> 
+ 
+    </head>
+    <body>
+        <h1>Le mode strict</h1>
+        <p id="varX"></p>
+        <p id="varY"></p>
+        <script>
+            'use strict';
+            var afficheX = document.getElementById('varX');
+            var afficheY = document.getElementById('varY');
+            
+            function affX(){
+                'use strict';
+                var x = 5;
+                alert(x);
+            }
+
+            function affY(){
+                'use strict';
+                y = 10;
+                alert(y);
+            }
+
+            affX();
+            affY();
+        </script>
+    </body>
+</html> 

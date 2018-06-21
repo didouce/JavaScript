@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript et formulaires</title>
+        <meta charset="utf-8"> 
+        <style>
+            label{
+                display: inline-block;
+                min-width: 200px;
+            }
+        </style>       
+    </head>
+    <body>
+       <h1>Les formulaires en HTML</h1>
+       
+       <form method="post" action="traitement.php">
+           <label for="prenom">Entrez votre prenom :</label>
+           <input type="text" name="prenom" id="prenom" required = 'required' maxlength="20"><br>
+           <span id="prenom_manquant"></span><br>
+
+           <label for="mail">Entrez votre email :</label>
+           <input type="email" name="mail" id="mail" required ='required' ><br>
+
+           <label for="tel">Numéro de téléphone :</label>
+           <input type="tel" name="tel" id="tel" required ='required'><br>
+
+           <input type="submit" value="valider" id="bouton_envoi" >
+       </form>
+
+       <script>
+           var validation = document.getElementById('bouton_envoi');
+           var prenom = document.getElementById('prenom');
+           var prenom_m = document.getElementById('prenom_manquant');
+           var prenom_v = /^[a-zA-ZéèiEi]+([-'\s][a-zA-ZéèiEi])?/;
+           validation.addEventListener('click', f_valid);
+
+           function f_valid(e){
+               if (prenom.validity.valueMissing) {
+                   e.preventDefault();
+                   prenom_m.textContent = 'Prénom manquant';
+                   prenom_m.style.color = 'red';
+               }else if(prenom_v.test(prenom.value) == false) {
+                   event.preventDefault();
+                   prenom_m.textContent = 'Format incorrect';
+                   prenom_m.style.color = 'orange';
+               }else {
+                   
+               }
+           }
+       </script>
+        
+    </body>
+</html> 

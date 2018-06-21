@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JS</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <h1>Les objets en JS</h1>
+        <script>
+            //methode slice nous permet de creer de nouveau tableau 
+            var prenoms = ['Pierre', 'Victor', 'Julia', 'Claire'], p='';
+
+            var garçons = prenoms.slice(0,2);
+
+            for(var i=0; i<prenoms.length; i++){
+                p+= 'Prenom : ' + (i+1) + ' : ' + prenoms[i] + '\n';
+            }
+
+            alert('Notre tableau de base :' +prenoms +
+                   '\n\nLe tableau créé par le slice( ) : ' + garçons);
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le DOM HTML</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <p onclick="this.textContent='Merci !'">Cliquez-moi, cliquez-moi !</p>
+        <p>Un deuxieme paragraphe</p>
+
+        <script>
+            var p1 = document.querySelector('p');
+
+            p1.onclick = function(){
+                this.innerHTML = '<strong>Bravo ! </strong>';
+                this.style.color = 'orange';
+            };
+        </script>
+        
+    </body>
+</html> 

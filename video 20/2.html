@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JS</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Les objets en JS</h1>
+        
+        <script>
+            //Objet littéral la plus utilisé
+            var moi = {
+                prenom :"Pierre",
+                nom : "Giraud",
+                age : 25,
+
+                id: function(){
+                    return this.prenom + ' ' +this.nom;
+                }
+            };
+
+            alert(moi.id());
+        </script>
+    </body>
+</htm> 

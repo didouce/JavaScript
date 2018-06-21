@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Les objets en JavaScript</title>
+        <meta charset="utf_8">
+    </head>
+
+    <body>
+        <h1>Les objets en JavaSript</h1>
+
+        <script>
+            var d = new Date();
+
+            var dms = d.getTime();
+            var dy = d.getFullYear();
+            var dmo = d.getMonth();
+            var ddate = d.getDate();
+
+            var dh = d.getHours();
+            var dmi = d.getMinutes();
+            var ds = d.getSeconds();
+            var dMs = d.getMilliseconds();
+
+            alert('Nous sommes le ' + ddate + '/' + dmo + '/' + dy + 
+                    '\nIl est actuellement' + dh + ':' + dmi+ ':' + ds + ':' + dMs);
+        </script>
+
+    </body>
+
+</html>

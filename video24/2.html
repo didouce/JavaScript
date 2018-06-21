@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JS</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <h1>Les objets en JS</h1>
+        <script>
+            //methode pop pour supprimer des elements à la  
+            var prenoms = ['Pierre', 'Victor', 'Julia', 'Claire'], p='';
+
+            var suppr = prenoms.pop();
+
+            for (var i=0; i<prenoms.length; i++){
+                p+= 'Prenom n°' + (i+1) + ' : ' + prenoms[i] + '\n';
+            }
+            alert(p + '\n\nNous avaons supprimé ' + suppr + ' du tableau');
+        </script>
+    </body>
+</html>

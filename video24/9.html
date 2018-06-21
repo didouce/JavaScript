@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JS</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <h1>Les objets en JS</h1>
+        <script>
+            //methode join pour afficher les elements sous forme de chaine de caractére
+            var prenoms = ['Pierre', 'pierre', 'Julia', 'julia'], p='';
+
+            var chaine = prenoms.join('/');
+            for(var i=0; i<prenoms.length; i++){
+                p+= 'Prenom : ' + (i+1) + ' : ' + prenoms[i] + '\n';
+            }
+
+            alert('Nouveau tableau : \n' +p +
+                   '\n\nLa chaine renvoyée par join() : ' + chaine);
+        
+        </script>
+    </body>
+</html>

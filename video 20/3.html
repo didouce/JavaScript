@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JS</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Les objets en JS</h1>
+        
+        <script>
+            //Objet constructeur utilisé lors des grand projets
+            function Identite(p, n, a){
+                this.prenom = p;
+                this.nom = n;
+                this.age = a;
+            }
+
+            var pierre = new Identite("Pierre", "Giraud", 25);
+            var victor = new Identite("Victor", "Durand  ", 24);
+
+            alert('Age de peirre: ' +pierre.age +
+                   '\nAge de Victor : ' +victor.age);
+
+        </script>
+    </body>
+</htm>

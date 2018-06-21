@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JS</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Les objets en JS</h1>
+        
+        <script>
+            //la variable change de contenu dans les objet natif si elle est stocké dans une nvlle var
+            function Identite(p, n, a){
+                this.prenom = p;
+                this.nom = n;
+                this.age = a;
+            }
+
+            var pierre = new Identite("Pierre", "Giraud", 25);
+            var victor = pierre;
+
+            victor.prenom="dskjh";
+
+            alert('Age de peirre: ' +pierre.prenom +
+                   '\nAge de Victor : ' +victor.prenom);
+
+        </script>
+    </body>
+</htm>

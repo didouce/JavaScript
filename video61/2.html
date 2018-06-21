@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>l'élement canvas</title>
+        <meta charset="utf-8"> 
+ 
+    </head>
+    <body>
+        <p>Horloge actulaisée en direct ! il est <span id="temps"></span></p>
+        <button id="stop">Arreter le temps</button>
+
+        <script>
+            var heure = document.getElementById('temps');
+            var stop = document.getElementById('stop');
+            var tempsReel = setInterval(horloge, 1000);
+        
+
+            function horloge(){
+                var d = new Date();
+                heure.innerHTML = d.toLocaleDateString();
+            }
+
+            stop.addEventListener('click', arret);
+            function arret(){
+                clearInterval(tempsReel);
+            }
+        </script>
+    </body>
+</html> 

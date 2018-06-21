@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les objets en JavaScript</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+        <h1>Les objets en JavaScript</h1>
+        <script>
+            //creer un tableau en utilisant la boucle for ... in 
+            var prenoms = {
+                prenom1 : 'Pierre',
+                prenom2 : 'Victor',
+                prenom3 : 'Julia',
+                prenom4 : 'Claire'
+            }, p ='';
+
+            for(var clefs in prenoms){
+                p+= clefs + ' : ' + prenoms[clefs] + '\n';
+            }
+            alert(p);
+        
+        </script>
+    </body>
+</html>
